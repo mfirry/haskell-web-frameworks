@@ -17,5 +17,6 @@ executable spock
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5
                      , Spock >= 0.11
+                     , aeson
                      , mtl
                      , text
