@@ -10,4 +10,5 @@ data App = App
 
 mkYesodData "App" $(parseRoutesFile "routes")
 
-instance Yesod App
+instance Yesod App where
+    makeSessionBackend _ = return Nothing
