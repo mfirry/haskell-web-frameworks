@@ -15,7 +15,7 @@ import Web.Spock.Config
 main :: IO ()
 main = do
   spockCfg <- defaultSpockCfg () PCNoDatabase ()
-  runSpock 8080 (spock spockCfg app)
+  runSpock 3000 (spock spockCfg app)
 
 newtype Response = Response {message :: String}
   deriving (Show, Generic)
