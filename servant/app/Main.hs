@@ -8,7 +8,7 @@ module Main where
 import GHC.Generics
 
 -- aeson
-import Data.Aeson       hiding (json)
+import Data.Aeson       (ToJSON)
 
 import Network.Wai
 import Network.Wai.Handler.Warp
@@ -35,11 +35,11 @@ api :: Proxy API
 api = Proxy
 
 server :: Server API
-server = return notMuch
-  :<|> return _message
+server = return plainText
+  :<|> return json
 
-notMuch :: String
-notMuch = "Hello, World!"
+plainText :: String
+plainText = "Hello, World!"
 
-_message :: Message
-_message = Message "Hello, World!"
+json :: Message
+json = Message "Hello, World!"
