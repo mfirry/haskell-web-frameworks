@@ -1,0 +1,22 @@
+name:                myproj
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/marcosh/snap#readme
+author:              Marco Perone
+maintainer:          pasafama@gmail.com
+copyright:           2020 Marco Perone
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - aeson
+  - snap
+  - text
+
+executables:
+  myproj:
+    source-dirs:      src
+    main:             Main.hs

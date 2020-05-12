@@ -1,0 +1,31 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: edfbb1a23732ec6f8718d248a7c95423e5e281dd9fb4ef9af13b79f76a0b2238
+
+name:           myproj
+version:        0.1.0.0
+category:       Web
+homepage:       https://github.com/marcosh/snap#readme
+author:         Marco Perone
+maintainer:     pasafama@gmail.com
+copyright:      2020 Marco Perone
+build-type:     Simple
+extra-source-files:
+    README.md
+
+executable myproj
+  main-is: Main.hs
+  other-modules:
+      Paths_myproj
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , snap
+    , text
+  default-language: Haskell2010
