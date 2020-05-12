@@ -22,4 +22,4 @@ appInit = makeSnaplet "myproj" "A simple application" Nothing $
             ]
 
 main :: IO ()
-main = serveSnaplet defaultConfig appInit
+main = serveSnaplet (setPort 3000 defaultConfig) appInit
