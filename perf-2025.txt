@@ -1,0 +1,19 @@
+snap
+Running 20s test @ http://localhost:3000/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.89ms   25.91ms 158.57ms   85.10%
+    Req/Sec    20.74k     3.49k   29.90k    70.40%
+  829609 requests in 20.10s, 125.01MB read
+Requests/sec:  41274.72
+Transfer/sec:      6.22MB
+
+servant
+Running 20s test @ http://localhost:3000/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   156.69us   65.68us   2.34ms   73.76%
+    Req/Sec    27.63k     1.53k   32.15k    76.37%
+  1105236 requests in 20.10s, 179.19MB read
+Requests/sec:  54987.78
+Transfer/sec:      8.91MB
