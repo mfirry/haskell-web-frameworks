@@ -1,0 +1,140 @@
+servant :: wrk -t2 -c10 -d20s http://localhost:3000/plaintext
+Running 20s test @ http://localhost:3000/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   123.21us   53.48us   2.59ms   78.53%
+    Req/Sec    36.05k     3.33k   46.37k    68.16%
+  1442352 requests in 20.10s, 233.84MB read
+Requests/sec:  71761.04
+Transfer/sec:     11.63MB
+
+servant :: wrk -t2 -c10 -d20s http://localhost:3000/json
+Running 20s test @ http://localhost:3000/json
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   127.08us   55.66us   4.08ms   78.58%
+    Req/Sec    35.16k     2.73k   42.52k    68.66%
+  1406573 requests in 20.10s, 254.87MB read
+Requests/sec:  69979.73
+Transfer/sec:     12.68MB
+
+yesod :: wrk -t2 -c10 -d20s http://localhost:3000/plaintext
+Running 20s test @ http://localhost:3000/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   684.07us  515.22us  28.63ms   99.32%
+    Req/Sec     7.53k   530.16     8.28k    83.08%
+  301037 requests in 20.10s, 58.28MB read
+Requests/sec:  14976.87
+Transfer/sec:      2.90MB
+
+yesod :: wrk -t2 -c10 -d20s http://localhost:3000/json
+Running 20s test @ http://localhost:3000/json
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   659.70us   81.10us   4.63ms   83.48%
+    Req/Sec     7.61k   270.90     8.15k    75.62%
+  304308 requests in 20.10s, 64.72MB read
+Requests/sec:  15139.61
+Transfer/sec:      3.22MB
+
+snap :: wrk -t2 -c10 -d20s http://localhost:3000/plaintext
+Running 20s test @ http://localhost:3000/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   642.65us   71.08us   4.48ms   83.27%
+    Req/Sec     7.81k   186.03     8.33k    73.88%
+  312318 requests in 20.10s, 60.46MB read
+Requests/sec:  15538.57
+Transfer/sec:      3.01MB
+
+snap :: wrk -t2 -c10 -d20s http://localhost:3000/json
+Running 20s test @ http://localhost:3000/json
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   647.76us   61.03us   2.27ms   76.32%
+    Req/Sec     7.74k   202.87     8.26k    69.90%
+  309654 requests in 20.10s, 65.85MB read
+Requests/sec:  15406.08
+Transfer/sec:      3.28MB
+
+scotty :: wrk -t2 -c10 -d20s http://localhost:3000/plaintext
+Running 20s test @ http://localhost:3000/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   521.04us    4.12ms 125.12ms   98.07%
+    Req/Sec    47.13k    16.11k   96.03k    73.75%
+  1876502 requests in 20.02s, 306.02MB read
+Requests/sec:  93747.79
+Transfer/sec:     15.29MB
+
+scotty :: wrk -t2 -c10 -d20s http://localhost:3000/json
+Running 20s test @ http://localhost:3000/json
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   408.69us    2.17ms  87.90ms   96.92%
+    Req/Sec    47.20k    19.14k   96.76k    71.00%
+  1879552 requests in 20.05s, 342.36MB read
+Requests/sec:  93753.96
+Transfer/sec:     17.08MB
+
+spring :: wrk -t2 -c10 -d20s http://localhost:8080/plaintext
+Running 20s test @ http://localhost:8080/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   189.79us  805.90us  48.55ms   98.52%
+    Req/Sec    35.92k     5.75k   42.78k    86.57%
+  1436366 requests in 20.10s, 174.23MB read
+Requests/sec:  71462.09
+Transfer/sec:      8.67MB
+
+spring :: wrk -t2 -c10 -d20s http://localhost:8080/json
+Running 20s test @ http://localhost:8080/json
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.51ms   18.16ms 255.05ms   97.78%
+    Req/Sec    25.59k     9.47k   44.41k    81.62%
+  601830 requests in 20.10s, 87.35MB read
+Requests/sec:  29940.13
+Transfer/sec:      4.35MB
+
+spring (jdk25) :: wrk -t2 -c10 -d20s http://localhost:8080/plaintext
+Running 20s test @ http://localhost:8080/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   161.33us  586.78us  47.80ms   98.47%
+    Req/Sec    37.23k     6.61k   61.37k    87.03%
+  1485611 requests in 20.10s, 180.20MB read
+Requests/sec:  73911.77
+Transfer/sec:      8.97MB
+
+spring (jdk25) :: wrk -t2 -c10 -d20s http://localhost:8080/json
+Running 20s test @ http://localhost:8080/json
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.19ms   18.58ms 229.17ms   96.85%
+    Req/Sec    24.42k     9.28k   37.71k    75.32%
+  580354 requests in 20.09s, 84.23MB read
+Requests/sec:  28882.21
+Transfer/sec:      4.19MB
+
+spring-webflux (jdk25) :: wrk -t2 -c10 -d20s http://localhost:8080/plaintext
+Running 20s test @ http://localhost:8080/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   208.02us    0.89ms  40.47ms   98.46%
+    Req/Sec    34.39k     6.67k   41.50k    89.30%
+  1375470 requests in 20.11s, 120.68MB read
+Requests/sec:  68396.75
+Transfer/sec:      6.00MB
+
+spring-webflux (jdk25) :: wrk -t2 -c10 -d20s http://localhost:8080/json
+Running 20s test @ http://localhost:8080/json
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   124.14us   72.76us   5.81ms   97.85%
+    Req/Sec    36.80k     2.18k   38.47k    92.79%
+  1471907 requests in 20.10s, 137.56MB read
+Requests/sec:  73229.63
+Transfer/sec:      6.84MB
+

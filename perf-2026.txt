@@ -1,0 +1,70 @@
+servant
+Running 20s test @ http://localhost:3000/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   123.21us   53.48us   2.59ms   78.53%
+    Req/Sec    36.05k     3.33k   46.37k    68.16%
+  1442352 requests in 20.10s, 233.84MB read
+Requests/sec:  71761.04
+Transfer/sec:     11.63MB
+
+yesod
+Running 20s test @ http://localhost:3000/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   684.07us  515.22us  28.63ms   99.32%
+    Req/Sec     7.53k   530.16     8.28k    83.08%
+  301037 requests in 20.10s, 58.28MB read
+Requests/sec:  14976.87
+Transfer/sec:      2.90MB
+
+snap
+Running 20s test @ http://localhost:3000/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   642.65us   71.08us   4.48ms   83.27%
+    Req/Sec     7.81k   186.03     8.33k    73.88%
+  312318 requests in 20.10s, 60.46MB read
+Requests/sec:  15538.57
+Transfer/sec:      3.01MB
+
+scotty
+Running 20s test @ http://localhost:3000/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   521.04us    4.12ms 125.12ms   98.07%
+    Req/Sec    47.13k    16.11k   96.03k    73.75%
+  1876502 requests in 20.02s, 306.02MB read
+Requests/sec:  93747.79
+Transfer/sec:     15.29MB
+
+spring
+Running 20s test @ http://localhost:8080/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   189.79us  805.90us  48.55ms   98.52%
+    Req/Sec    35.92k     5.75k   42.78k    86.57%
+  1436366 requests in 20.10s, 174.23MB read
+Requests/sec:  71462.09
+Transfer/sec:      8.67MB
+
+spring (jdk25)
+Running 20s test @ http://localhost:8080/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   161.33us  586.78us  47.80ms   98.47%
+    Req/Sec    37.23k     6.61k   61.37k    87.03%
+  1485611 requests in 20.10s, 180.20MB read
+Requests/sec:  73911.77
+Transfer/sec:      8.97MB
+
+spring-webflux (jdk25)
+Running 20s test @ http://localhost:8080/plaintext
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   208.02us    0.89ms  40.47ms   98.46%
+    Req/Sec    34.39k     6.67k   41.50k    89.30%
+  1375470 requests in 20.11s, 120.68MB read
+Requests/sec:  68396.75
+Transfer/sec:      6.00MB
+
